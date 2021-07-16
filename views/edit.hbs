@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-10 mx-auto">
+      <form action="/restaurants/{{this._id}}/edit" method="POST">
+        <div class="input-group-prepend mt-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">店名</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" name="name" placeholder="請輸入店名..." value="{{this.name}}">
+        </div>
+
+        <div class="input-group-prepend mt-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">類別</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" name="category" placeholder="請輸入類別..."
+            value="{{this.category}}">
+        </div>
+
+        <div class=" input-group-prepend mt-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">地址</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" name="location" placeholder="請輸入地址..."
+            value="{{this.location}}">
+        </div>
+
+        <div class="input-group-prepend mt-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">電話</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" name="phone" placeholder="請輸入電話..." value="{{this.phone}}">
+        </div>
+
+        <div class="input-group-prepend mt-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">描述</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" name="description" placeholder="請輸入描述..."
+            value="{{this.description}}">
+        </div>
+
+        <div class="input-group-prepend mt-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">圖片網址</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" name="image" placeholder="請輸入圖片網址..." value="{{this.image}}">
+        </div>
+
+        <button type="submit" class="btn btn-primary  mt-3">儲存</button>
+        <a href="/" class="btn btn-primary mt-3">返回</a>
+
+      </form>
+    </div>
+  </div>
+</div>
