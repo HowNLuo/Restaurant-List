@@ -5,7 +5,7 @@
       <form action="/search">
         <h4 class="mb-2">尋找餐廳：</h4>
         <div class="input-group">
-          <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類" aria-label="Restaurant Name..."
+          <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳名稱..." aria-label="Restaurant Name..."
             value="" aria-describedby="search-button">
           <div class="input-group-append">
             <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
@@ -16,11 +16,22 @@
   </div>
 </div>
 
-<!-- create restaurant -->
+<!-- create restaurant & sort-->
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-10 col-12 mx-auto">
+    <div class="col-md-10 col-12 mx-auto d-flex justify-content-between">
       <a href="/restaurants/new" class="btn btn-success">新增餐廳</a>
+      <div class="d-flex flex-row">
+        <span class="d-flex align-items-center  mr-1">排序方式：</span>
+        <form action="/" class="d-flex flex-row">
+          <select class="custom-select mr-3" id="inputGroupSelect01" name="sort">
+            <option value="asc">A → Z</option>
+            <option value="desc">Z → A</option>
+          </select>
+          <button type="submit" class="btn btn-dark">提交</button>
+        </form>
+
+      </div>
     </div>
   </div>
 </div>
@@ -42,7 +53,7 @@
           <div class="d-flex justify-content-end">
             <a href="/restaurants/{{this._id}}" class="text-primary mr-3">詳細資料</a>
             <a href="/restaurants/{{this._id}}/edit" class="text-primary mr-3">編輯</a>
-            <form action="/restaurants/{{this._id}}/delete" method="POST" style="display-inline">
+            <form action="/restaurants/{{this._id}}?_method=DELETE" method="POST" style="display-inline">
               <button class="btn btn-danger " type="submit">刪除</button>
             </form>
           </div>

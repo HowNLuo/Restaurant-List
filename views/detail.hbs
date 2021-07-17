@@ -3,11 +3,10 @@
 <div class="container mb-3">
   <div class="row">
     <div class="col-md-10 col-12 mx-auto d-flex">
-      <a href="/restaurants/{{restaurant._id}}/edit" class="btn btn-success mr-1">編輯</a>
-      <a href="/" class="btn btn-primary mr-1">返回</a>
-      <form action="/restaurants/{{restaurant._id}}/delete" method="POST" style="display-inline">
+      <form action="/restaurants/{{restaurant._id}}?_method=DELETE" method="POST" style="display-inline" class="mr-1">
         <button class="btn btn-danger" type="submit">刪除</button>
       </form>
+      <a href="/" class="btn btn-primary mr-1">返回</a>
     </div>
   </div>
 </div>
