@@ -2,20 +2,6 @@ const express = require('express')
 const router = express.Router()
 const Restaurant = require('../../models/restaurant')
 
-//搜尋功能
-router.get('/search', (req, res) => {
-  const keyword = req.query.keyword.trim()
-  Restaurant.find()
-    .lean()
-    .then((restaurantList) => {
-      const restaurants = restaurantList.filter((restaurant) =>
-        restaurant.name.toLowerCase().includes(keyword.toLowerCase())
-      )
-      res.render('index', { restaurants })
-    })
-    .catch((error) => console.error(error))
-})
-
 //新增餐廳頁面
 router.get('/new', (req, res) => {
   res.render('new')
